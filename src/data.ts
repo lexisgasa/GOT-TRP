@@ -13,3 +13,18 @@ const joffreyBaratheon: King = {
     return "Vais a morir todos";
   },
 };
+
+const jaimeLannister: Fighter = {
+  name: "Jaime",
+  surname: "Lannister",
+  age: 36,
+  state: "Alive",
+  dexterity: 9,
+  weapon: "Sword",
+  die() {
+    jaimeLannister.state = "Dead";
+  },
+  talk() {
+    return "Primero pego y luego pregunto";
+  },
+};
