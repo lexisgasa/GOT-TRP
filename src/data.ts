@@ -1,4 +1,4 @@
-import { type Fighter, type King } from "./types";
+import { type Adviser, type Fighter, type King } from "./types";
 
 const joffreyBaratheon: King = {
   name: "Joffrey",
@@ -41,5 +41,19 @@ const daenerysTargaryen: Fighter = {
   },
   talk() {
     return "Primero pego y luego pregunto";
+  },
+};
+
+const tyrionLannister: Adviser = {
+  name: "Tyrion",
+  surname: "Lannister",
+  age: 24,
+  state: "Alive",
+  companion: daenerysTargaryen,
+  die() {
+    tyrionLannister.state = "Dead";
+  },
+  talk() {
+    return "No sé por qué, pero creo que voy a morir pronto";
   },
 };
