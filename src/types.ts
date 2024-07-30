@@ -22,3 +22,9 @@ interface Adviser extends Character {
   companion: Character;
   talk: () => "No sé por qué, pero creo que voy a morir pronto";
 }
+
+interface Squire extends Character {
+  companion: Adviser;
+  fidelity: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+  talk: () => "Soy un loser";
+}
