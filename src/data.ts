@@ -71,3 +71,11 @@ const bronn: Squire = {
     return "Soy un loser";
   },
 };
+
+const gotCharacters = [
+  joffreyBaratheon,
+  jaimeLannister,
+  daenerysTargaryen,
+  tyrionLannister,
+  bronn,
+];
