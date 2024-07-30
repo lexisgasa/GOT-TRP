@@ -1,6 +1,6 @@
 export interface Character {
   name: string;
-  surname: string;
+  surname?: string;
   age: number;
   state: "Alive" | "Dead";
   die: () => void;
@@ -24,7 +24,7 @@ export interface Adviser extends Character {
 }
 
 export interface Squire extends Character {
-  companion: Adviser;
+  companion: Fighter;
   fidelity: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
   talk: () => "Soy un loser";
 }
