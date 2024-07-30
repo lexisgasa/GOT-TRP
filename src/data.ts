@@ -28,3 +28,18 @@ const jaimeLannister: Fighter = {
     return "Primero pego y luego pregunto";
   },
 };
+
+const daenerysTargaryen: Fighter = {
+  name: "Daenerys",
+  surname: "Targaryen",
+  age: 16,
+  state: "Alive",
+  dexterity: 1,
+  weapon: "Dagger",
+  die() {
+    daenerysTargaryen.state = "Dead";
+  },
+  talk() {
+    return "Primero pego y luego pregunto";
+  },
+};
