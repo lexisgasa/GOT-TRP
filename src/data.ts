@@ -1,37 +1,17 @@
-import { type Squire, type Adviser, type Fighter, type King } from "./types";
-import { createKing } from "./characters-factory-functions.js";
+import { type Squire, type Adviser } from "./types";
+import { createFighter, createKing } from "./characters-factory-functions.js";
 
 const joffreyBaratheon = createKing("Joffrey", "Baratheon", 16, 1);
 
-const jaimeLannister: Fighter = {
-  name: "Jaime",
-  surname: "Lannister",
-  age: 36,
-  isAlive: true,
-  dexterity: 9,
-  weapon: "Sword",
-  die() {
-    jaimeLannister.isAlive = false;
-  },
-  talk() {
-    return "Primero pego y luego pregunto";
-  },
-};
+const jaimeLannister = createFighter("Jaime", "Lannister", 36, "sword", 9);
 
-const daenerysTargaryen: Fighter = {
-  name: "Daenerys",
-  surname: "Targaryen",
-  age: 16,
-  isAlive: true,
-  dexterity: 1,
-  weapon: "Dagger",
-  die() {
-    daenerysTargaryen.isAlive = false;
-  },
-  talk() {
-    return "Primero pego y luego pregunto";
-  },
-};
+const daenerysTargaryen = createFighter(
+  "Daenerys",
+  "Targaryen",
+  16,
+  "dagger",
+  1
+);
 
 const tyrionLannister: Adviser = {
   name: "Tyrion",

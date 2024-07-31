@@ -1,4 +1,4 @@
-import type { King } from "./types";
+import type { DexterityRange, Fighter, King } from "./types";
 
 export const createKing = (
   name: string,
@@ -21,4 +21,28 @@ export const createKing = (
   };
 
   return king;
+};
+
+export const createFighter = (
+  name: string,
+  surname: string,
+  age: number,
+  weapon: string,
+  dexterity: DexterityRange
+) => {
+  const figther: Fighter = {
+    name,
+    surname,
+    age,
+    isAlive: true,
+    weapon,
+    dexterity,
+    talk() {
+      return "Primero pego y luego pregunto";
+    },
+    die() {
+      figther.isAlive = false;
+    },
+  };
+  return figther;
 };
