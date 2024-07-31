@@ -1,6 +1,7 @@
 import type {
   Adviser,
   Character,
+  mandatoryData,
   DexterityRange,
   FidelityRange,
   Fighter,
@@ -9,9 +10,7 @@ import type {
 } from "./types";
 
 export const createKing = (
-  name: string,
-  surname: string,
-  age: number,
+  { name, surname, age }: mandatoryData,
   yearsOfReign: number
 ): King => {
   const king: King = {
@@ -32,9 +31,7 @@ export const createKing = (
 };
 
 export const createFighter = (
-  name: string,
-  surname: string,
-  age: number,
+  { name, surname, age }: mandatoryData,
   weapon: string,
   dexterity: DexterityRange
 ) => {
@@ -56,9 +53,7 @@ export const createFighter = (
 };
 
 export const createAdviser = (
-  name: string,
-  surname: string,
-  age: number,
+  { name, surname, age }: mandatoryData,
   advisee: Character
 ): Adviser => {
   const adviser: Adviser = {
@@ -79,11 +74,9 @@ export const createAdviser = (
 };
 
 export const createSquire = (
-  name: string,
-  age: number,
+  { name, surname, age }: mandatoryData,
   servedCharacter: Fighter,
-  fidelity: FidelityRange,
-  surname?: string
+  fidelity: FidelityRange
 ): Squire => {
   const squire: Squire = {
     name,
