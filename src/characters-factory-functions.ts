@@ -1,4 +1,10 @@
-import type { DexterityRange, Fighter, King } from "./types";
+import type {
+  Adviser,
+  Character,
+  DexterityRange,
+  Fighter,
+  King,
+} from "./types";
 
 export const createKing = (
   name: string,
@@ -45,4 +51,27 @@ export const createFighter = (
     },
   };
   return figther;
+};
+
+export const createAdviser = (
+  name: string,
+  surname: string,
+  age: number,
+  advisee: Character
+): Adviser => {
+  const adviser: Adviser = {
+    name,
+    surname,
+    age,
+    isAlive: true,
+    advisee,
+    talk() {
+      return "No sé por qué, pero creo que voy a morir pronto";
+    },
+    die() {
+      adviser.isAlive = false;
+    },
+  };
+
+  return adviser;
 };
