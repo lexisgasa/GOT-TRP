@@ -1,9 +1,7 @@
-import {
-  createAdviser,
-  createFighter,
-  createKing,
-  createSquire,
-} from "./characters-factory-functions.js";
+import { createAdviser } from "./characters/adviser/createAdviser.js";
+import { createFighter } from "./characters/fighter/createFighter.js";
+import { createKing } from "./characters/king/createKing.js";
+import { createSquire } from "./characters/squire/createSquire.js";
 
 const joffreyBaratheon = createKing(
   { name: "Joffrey", surname: "Baratheon", age: 16 },
