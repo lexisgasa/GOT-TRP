@@ -34,3 +34,7 @@ const gotCharacters = [
   tyrionLannister,
   bronn,
 ];
+
+const characterTalk = gotCharacters.map((character) => character.talk());
+
+characterTalk.forEach((talk, index) => console.log(`${index + 1}. ${talk}`));
