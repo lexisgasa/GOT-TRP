@@ -1,34 +1,11 @@
+import { DexterityRange, Fighter } from "./characters/fighter/type";
 import type {
   Adviser,
   Character,
   mandatoryData,
-  DexterityRange,
   FidelityRange,
-  Fighter,
   Squire,
 } from "./types";
-
-export const createFighter = (
-  { name, surname, age }: mandatoryData,
-  weapon: string,
-  dexterity: DexterityRange
-) => {
-  const figther: Fighter = {
-    name,
-    surname,
-    age,
-    isAlive: true,
-    weapon,
-    dexterity,
-    talk() {
-      return "Primero pego y luego pregunto";
-    },
-    die() {
-      figther.isAlive = false;
-    },
-  };
-  return figther;
-};
 
 export const createAdviser = (
   { name, surname, age }: mandatoryData,

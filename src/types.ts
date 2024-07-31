@@ -1,4 +1,5 @@
-export type DexterityRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+import { Fighter } from "./characters/fighter/type";
+
 export type FidelityRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
 export interface mandatoryData {
@@ -11,12 +12,6 @@ export interface Character extends mandatoryData {
   isAlive: boolean;
   die: () => void;
   talk: () => string;
-}
-
-export interface Fighter extends Character {
-  weapon: string;
-  dexterity: DexterityRange;
-  talk: () => "Primero pego y luego pregunto";
 }
 
 export interface Adviser extends Character {
