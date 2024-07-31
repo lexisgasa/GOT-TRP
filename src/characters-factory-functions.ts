@@ -2,8 +2,10 @@ import type {
   Adviser,
   Character,
   DexterityRange,
+  FidelityRange,
   Fighter,
   King,
+  Squire,
 } from "./types";
 
 export const createKing = (
@@ -74,4 +76,29 @@ export const createAdviser = (
   };
 
   return adviser;
+};
+
+export const createSquire = (
+  name: string,
+  age: number,
+  servedCharacter: Fighter,
+  fidelity: FidelityRange,
+  surname?: string
+): Squire => {
+  const squire: Squire = {
+    name,
+    surname,
+    age,
+    isAlive: true,
+    servedCharacter,
+    fidelity,
+    talk() {
+      return "Soy un loser";
+    },
+    die() {
+      squire.isAlive = false;
+    },
+  };
+
+  return squire;
 };
