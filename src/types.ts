@@ -13,11 +13,6 @@ export interface Character extends mandatoryData {
   talk: () => string;
 }
 
-export interface King extends Character {
-  yearsOfReign: number;
-  talk: () => "Vais a morir todos";
-}
-
 export interface Fighter extends Character {
   weapon: string;
   dexterity: DexterityRange;
