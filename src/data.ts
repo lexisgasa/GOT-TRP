@@ -1,4 +1,5 @@
-import { createAdviser, createSquire } from "./characters-factory-functions.js";
+import { createSquire } from "./characters-factory-functions.js";
+import { createAdviser } from "./characters/adviser/createAdviser.js";
 import { createFighter } from "./characters/fighter/createFighter.js";
 import { createKing } from "./characters/king/createKing.js";
 
