@@ -5,26 +5,29 @@ import {
   createSquire,
 } from "./characters-factory-functions.js";
 
-const joffreyBaratheon = createKing("Joffrey", "Baratheon", 16, 1);
+const joffreyBaratheon = createKing(
+  { name: "Joffrey", surname: "Baratheon", age: 16 },
+  1
+);
 
-const jaimeLannister = createFighter("Jaime", "Lannister", 36, "sword", 9);
+const jaimeLannister = createFighter(
+  { name: "Jaime", surname: "Lannister", age: 36 },
+  "sword",
+  9
+);
 
 const daenerysTargaryen = createFighter(
-  "Daenerys",
-  "Targaryen",
-  16,
+  { name: "Daenerys", surname: "Targaryen", age: 16 },
   "dagger",
   1
 );
 
 const tyrionLannister = createAdviser(
-  "Tyrion",
-  "Lannister",
-  24,
+  { name: "Tyrion", surname: "Lannister", age: 24 },
   daenerysTargaryen
 );
 
-const bronn = createSquire("Bronn", 25, jaimeLannister, 7);
+const bronn = createSquire({ name: "Bronn", age: 25 }, jaimeLannister, 7);
 
 const gotCharacters = [
   joffreyBaratheon,
