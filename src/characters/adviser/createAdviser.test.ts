@@ -2,9 +2,15 @@ import { Character } from "../../types";
 import { createAdviser } from "./createAdviser";
 
 describe("Given the function createAdviser", () => {
-  describe("When it receives the values {'Tyrion', 'Lannister', '24'}, daenerysTargaryen", () => {
-    test("Then it should return an object type Adviser with the properties name: 'Tyrion', advisee.name: 'Daenerys'", () => {
-      const mandatoryData = { name: "Tyrion", surname: "Lannister", age: 24 };
+  describe("When it receives the name Tyrion and the advisee Daenerys", () => {
+    test("Then it should return an adviser named Tyrion whose advisee's name is Daenerys", () => {
+      const mandatoryCharacterData = {
+        name: "Tyrion",
+        surname: "Lannister",
+        age: 24,
+      };
+      const expectedAdviserName = "Tyrion";
+      const expectedAdviseeName = "Daenerys";
       const advisee: Character = {
         name: "Daenerys",
         surname: "Targaryen",
@@ -15,16 +21,11 @@ describe("Given the function createAdviser", () => {
         },
         die() {},
       };
-      const expectedTyrion = {
-        name: "Tyrion",
-        surname: "Lannister",
-        advisee: { name: "Daenerys" },
-      };
 
-      const tyrion = createAdviser(mandatoryData, advisee);
+      const adviser = createAdviser(mandatoryCharacterData, advisee);
 
-      expect(tyrion.name).toBe(expectedTyrion.name);
-      expect(tyrion.advisee.name).toBe(expectedTyrion.advisee.name);
+      expect(adviser.name).toBe(expectedAdviserName);
+      expect(adviser.advisee.name).toBe(expectedAdviseeName);
     });
   });
 });
