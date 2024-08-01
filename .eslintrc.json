@@ -4,13 +4,17 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["xo", "prettier", "jest"],
+  "extends": ["xo", "prettier"],
   "overrides": [
     {
-      "extends": ["xo-typescript", "prettier", "jest"],
+      "extends": ["xo-typescript", "prettier"],
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/consistent-type-definitions": ["error", "interface"]
+      },
+      "plugins": ["jest"],
+      "env": {
+        "jest/globals": true
       }
     }
   ],

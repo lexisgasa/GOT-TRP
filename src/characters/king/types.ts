@@ -1,4 +1,4 @@
-import { Character } from "../../types";
+import { Character } from "../character/types";
 
 export interface King extends Character {
   yearsOfReign: number;

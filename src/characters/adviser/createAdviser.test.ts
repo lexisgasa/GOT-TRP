@@ -1,10 +1,10 @@
-import { Character } from "../../types";
+import type { Character, MandatoryCharacterData } from "../character/types";
 import { createAdviser } from "./createAdviser";
 
 describe("Given the function createAdviser", () => {
   describe("When it receives the name Tyrion and the advisee Daenerys", () => {
     test("Then it should return an adviser named Tyrion whose advisee's name is Daenerys", () => {
-      const mandatoryCharacterData = {
+      const mandatoryCharacterData: MandatoryCharacterData = {
         name: "Tyrion",
         surname: "Lannister",
         age: 24,
@@ -19,7 +19,9 @@ describe("Given the function createAdviser", () => {
         talk() {
           return "";
         },
-        die() {},
+        die() {
+          this.isAlive = false;
+        },
       };
 
       const adviser = createAdviser(mandatoryCharacterData, advisee);

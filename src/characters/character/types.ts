@@ -1,10 +1,10 @@
-export interface mandatoryData {
+export interface MandatoryCharacterData {
   name: string;
   surname?: string;
   age: number;
 }
 
-export interface Character extends mandatoryData {
+export interface Character extends MandatoryCharacterData {
   isAlive: boolean;
   die: () => void;
   talk: () => string;

@@ -1,9 +1,9 @@
-import { Character, mandatoryData } from "../../types";
-import { Adviser } from "./type";
+import type { Character, MandatoryCharacterData } from "../character/types";
+import type { Adviser } from "./types";
 
 export const createAdviser = (
-  { name, surname, age }: mandatoryData,
-  advisee: Character
+  { name, surname, age }: MandatoryCharacterData,
+  advisee: Character,
 ): Adviser => {
   const adviser: Adviser = {
     name,

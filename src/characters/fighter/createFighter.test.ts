@@ -1,10 +1,11 @@
+import type { MandatoryCharacterData } from "../character/types";
 import { createFighter } from "./createFighter";
-import { DexterityRange, Fighter } from "./type";
+import type { DexterityRange, Fighter } from "./types";
 
 describe("Given the function createFighter", () => {
   describe("When it receives the name Jaime, the surname Lannister and a sword as a weapon", () => {
     test("Then it should return a fighter named Jaime Lannister that uses a sword as a weapon", () => {
-      const mandatoryCharacterData = {
+      const mandatoryCharacterData: MandatoryCharacterData = {
         name: "Jaime",
         surname: "Lannister",
         age: 36,

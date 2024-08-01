@@ -1,11 +1,15 @@
-import { Fighter } from "../fighter/type";
+import type { MandatoryCharacterData } from "../character/types";
+import type { Fighter } from "../fighter/types";
 import { createSquire } from "./createSquire";
-import { FidelityRange } from "./type";
+import type { FidelityRange } from "./types";
 
 describe("Given the function createSquire", () => {
   describe("When it receives the name Bronn and the serving person's name Jaime", () => {
     test("Then it should return a squire named Bronn who serves someone named Jaime", () => {
-      const mandatoryCharacterData = { name: "Bronn", age: 25 };
+      const mandatoryCharacterData: MandatoryCharacterData = {
+        name: "Bronn",
+        age: 25,
+      };
       const expectedSquireName = "Bronn";
       const expectedServedCharacterName = "Jaime";
       const fidelity: FidelityRange = 7;
@@ -19,7 +23,9 @@ describe("Given the function createSquire", () => {
         talk() {
           return "Primero pego y luego pregunto";
         },
-        die() {},
+        die() {
+          this.isAlive = false;
+        },
       };
 
       const squire = createSquire(
