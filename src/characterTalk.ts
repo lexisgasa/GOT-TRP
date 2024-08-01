@@ -1,5 +1,4 @@
-import { characterTypes } from "./data.js";
+import { type CharacterTypes } from "./data.js";
 
-const characterTalk = (characters: characterTypes[]): string[] => {
-  return characters.map((character) => character.talk());
-};
+const characterTalk = (characters: CharacterTypes[]): string[] =>
+  characters.map((character) => character.talk());

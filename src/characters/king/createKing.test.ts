@@ -1,11 +1,11 @@
-import { mandatoryCharacterData } from "../character/types";
+import type { MandatoryCharacterData } from "../character/types";
 import { createKing } from "./createKing";
-import { King } from "./types";
+import type { King } from "./types";
 
 describe("Given the function createKing", () => {
   describe("When it receives the name Joffrey, the surname Baratheon and the age of 16", () => {
     test("Then it should return a king named Joffrey Baratheon who has the age of 16", () => {
-      const mandatoryCharacterData: mandatoryCharacterData = {
+      const mandatoryCharacterData: MandatoryCharacterData = {
         name: "Joffrey",
         surname: "Baratheon",
         age: 16,

@@ -1,9 +1,9 @@
-import { mandatoryCharacterData } from "../character/types";
-import { Fighter } from "../fighter/types";
-import { FidelityRange, Squire } from "./types";
+import type { MandatoryCharacterData } from "../character/types";
+import type { Fighter } from "../fighter/types";
+import type { FidelityRange, Squire } from "./types";
 
 export const createSquire = (
-  { name, surname, age }: mandatoryCharacterData,
+  { name, surname, age }: MandatoryCharacterData,
   servedCharacter: Fighter,
   fidelity: FidelityRange,
 ): Squire => {
