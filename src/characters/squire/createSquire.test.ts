@@ -1,10 +1,14 @@
 import { Fighter } from "../fighter/type";
 import { createSquire } from "./createSquire";
+import { FidelityRange } from "./type";
 
 describe("Given the function createSquire", () => {
-  describe("When it receives the values name: 'Bronn' and servedCharacter.name: 'Jaime',", () => {
-    test("Then it should return an object type Squire with the properties name: 'Bronn', servedCharacter.name: 'Jaime'", () => {
-      const mandatoryData = { name: "Bronn", age: 25 };
+  describe("When it receives the name Bronn and the serving person's name Jaime", () => {
+    test("Then it should return a squire named Bronn who serves someone named Jaime", () => {
+      const mandatoryCharacterData = { name: "Bronn", age: 25 };
+      const expectedSquireName = "Bronn";
+      const expectedServedCharacterName = "Jaime";
+      const fidelity: FidelityRange = 7;
       const servedCharacter: Fighter = {
         name: "Jaime",
         surname: "Lannister",
@@ -17,18 +21,15 @@ describe("Given the function createSquire", () => {
         },
         die() {},
       };
-      const fidelity = 7;
-      const expectedBronn = {
-        name: "Bronn",
-        servedCharacter: { name: "Jaime" },
-      };
 
-      const bronn = createSquire(mandatoryData, servedCharacter, fidelity);
-
-      expect(bronn.name).toBe(expectedBronn.name);
-      expect(bronn.servedCharacter.name).toBe(
-        expectedBronn.servedCharacter.name
+      const squire = createSquire(
+        mandatoryCharacterData,
+        servedCharacter,
+        fidelity,
       );
+
+      expect(squire.name).toBe(expectedSquireName);
+      expect(squire.servedCharacter.name).toBe(expectedServedCharacterName);
     });
   });
 });
