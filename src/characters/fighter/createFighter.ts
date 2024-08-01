@@ -1,10 +1,10 @@
-import { mandatoryData } from "../../types";
-import { DexterityRange, Fighter } from "./type";
+import { mandatoryCharacterData } from "../character/types";
+import { DexterityRange, Fighter } from "./types";
 
 export const createFighter = (
-  { name, surname, age }: mandatoryData,
+  { name, surname, age }: mandatoryCharacterData,
   weapon: string,
-  dexterity: DexterityRange
+  dexterity: DexterityRange,
 ) => {
   const figther: Fighter = {
     name,

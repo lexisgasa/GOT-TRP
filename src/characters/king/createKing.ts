@@ -1,9 +1,9 @@
-import { mandatoryData } from "../../types";
-import { King } from "./type";
+import { mandatoryCharacterData } from "../character/types";
+import { King } from "./types";
 
 export const createKing = (
-  { name, surname, age }: mandatoryData,
-  yearsOfReign: number
+  { name, surname, age }: mandatoryCharacterData,
+  yearsOfReign: number,
 ): King => {
   const king: King = {
     name,
