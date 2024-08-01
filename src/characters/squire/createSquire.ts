@@ -1,3 +1,4 @@
+import { createCharacter } from "../character/createCharacter";
 import type { MandatoryCharacterData } from "../character/types";
 import type { Fighter } from "../fighter/types";
 import type { FidelityRange, Squire } from "./types";
@@ -7,20 +8,11 @@ export const createSquire = (
   servedCharacter: Fighter,
   fidelity: FidelityRange,
 ): Squire => {
-  const squire: Squire = {
-    name,
-    surname,
-    age,
-    isAlive: true,
-    servedCharacter,
-    fidelity,
-    talk() {
-      return "Soy un loser";
-    },
-    die() {
-      squire.isAlive = false;
-    },
-  };
+  const squire = createCharacter({ name, surname, age }) as Squire;
+
+  squire.servedCharacter = servedCharacter;
+  squire.fidelity = fidelity;
+  squire.talk = () => "Soy un loser";
 
   return squire;
 };

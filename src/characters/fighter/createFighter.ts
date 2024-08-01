@@ -1,3 +1,4 @@
+import { createCharacter } from "../character/createCharacter";
 import type { MandatoryCharacterData } from "../character/types";
 import type { DexterityRange, Fighter } from "./types";
 
@@ -6,19 +7,11 @@ export const createFighter = (
   weapon: string,
   dexterity: DexterityRange,
 ) => {
-  const figther: Fighter = {
-    name,
-    surname,
-    age,
-    isAlive: true,
-    weapon,
-    dexterity,
-    talk() {
-      return "Primero pego y luego pregunto";
-    },
-    die() {
-      figther.isAlive = false;
-    },
-  };
-  return figther;
+  const fighter = createCharacter({ name, surname, age }) as Fighter;
+
+  fighter.weapon = weapon;
+  fighter.dexterity = dexterity;
+  fighter.talk = () => "Primero pego y luego pregunto";
+
+  return fighter;
 };

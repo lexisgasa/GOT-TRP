@@ -1,3 +1,4 @@
+import { createCharacter } from "../character/createCharacter";
 import type { MandatoryCharacterData } from "../character/types";
 import type { King } from "./types";
 
@@ -5,19 +6,10 @@ export const createKing = (
   { name, surname, age }: MandatoryCharacterData,
   yearsOfReign: number,
 ): King => {
-  const king: King = {
-    name,
-    surname,
-    age,
-    isAlive: true,
-    yearsOfReign,
-    talk() {
-      return "Vais a morir todos";
-    },
-    die() {
-      king.isAlive = false;
-    },
-  };
+  const king = createCharacter({ name, surname, age }) as King;
+
+  king.yearsOfReign = yearsOfReign;
+  king.talk = () => "Vais a morir todos";
 
   return king;
 };
