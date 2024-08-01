@@ -1,22 +1,29 @@
 import { createFighter } from "./createFighter";
+import { DexterityRange, Fighter } from "./type";
 
 describe("Given the function createFighter", () => {
-  describe("When it receives the values {'Jaime', 'Lannister', '36'},'sword', 9", () => {
-    test("Then it should return an object type Fighter with the properties name: 'Jaime', surname: 'Lannister', weapon: 'sword'", () => {
-      const mandatoryData = { name: "Jaime", surname: "Lannister", age: 36 };
-      const weapon = "sword";
-      const dexterity = 9;
-      const expectedJaime = {
+  describe("When it receives the name Jaime, the surname Lannister and a sword as a weapon", () => {
+    test("Then it should return a fighter named Jaime Lannister that uses a sword as a weapon", () => {
+      const mandatoryCharacterData = {
         name: "Jaime",
         surname: "Lannister",
-        weapon: "sword",
+        age: 36,
       };
+      const weapon = "sword";
+      const dexterity: DexterityRange = 9;
+      const expectedFighterName = "Jaime";
+      const expectedFighterSurname = "Lannister";
+      const expectedFighterWeapon = "sword";
 
-      const jaime = createFighter(mandatoryData, weapon, dexterity);
+      const fighter: Fighter = createFighter(
+        mandatoryCharacterData,
+        weapon,
+        dexterity,
+      );
 
-      expect(jaime.name).toBe(expectedJaime.name);
-      expect(jaime.surname).toBe(expectedJaime.surname);
-      expect(jaime.weapon).toBe(expectedJaime.weapon);
+      expect(fighter.name).toBe(expectedFighterName);
+      expect(fighter.surname).toBe(expectedFighterSurname);
+      expect(fighter.weapon).toBe(expectedFighterWeapon);
     });
   });
 });
