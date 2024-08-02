@@ -25,6 +25,11 @@ h1 {
   margin: 0;
 }
 
+li {
+  margin: 0;
+  list-style-type: none;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -33,4 +38,21 @@ h1 {
 .header {
   padding: 20px;
   text-align: center;
+}
+
+.card {
+  background-color: #fff;
+  height: 455px;
+  width: 375px;
+  border-radius: 5px;
+  box-shadow: 2px 4px 10px #000;
+  position: relative;
+}
+
+.card__container {
+  background-color: #331c0d;
+  height: 175px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
