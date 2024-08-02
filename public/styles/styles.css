@@ -38,6 +38,7 @@ li {
 .header {
   padding: 20px;
   text-align: center;
+  font-size: 2rem;
 }
 
 .card {
@@ -55,4 +56,12 @@ li {
   width: 100%;
   position: absolute;
   bottom: 0;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-size: 2rem;
 }
