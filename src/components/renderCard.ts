@@ -1,13 +1,21 @@
+import type { CharacterTypes } from "../data.js";
 import { renderCardContainer } from "./renderCardContainer.js";
 
-export const renderCard = (): HTMLElement => {
-  const card = document.createElement("li");
+export const renderCard = (characters: CharacterTypes[]): HTMLElement => {
+  const cardList = document.createElement("ul");
+  cardList.classList.add("card-list");
 
-  card.classList.add("card");
+  characters.forEach((character) => {
+    const card = document.createElement("li");
 
-  const cardContainer = renderCardContainer();
+    card.classList.add("card");
 
-  card.appendChild(cardContainer);
+    const cardContainer = renderCardContainer(character);
 
-  return card;
+    card.appendChild(cardContainer);
+
+    cardList.appendChild(card);
+  });
+
+  return cardList;
 };
