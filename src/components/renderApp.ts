@@ -1,3 +1,4 @@
+import { renderCard } from "./renderCard.js";
 import { renderHeader } from "./renderHeader.js";
 
 export const renderApp = () => {
@@ -6,7 +7,11 @@ export const renderApp = () => {
   container.classList.add("container");
 
   const header = renderHeader();
+  const card = renderCard();
 
-  container.appendChild(header);
+  container.innerHTML = `
+  ${header.outerHTML}
+  ${card.outerHTML}
+  `;
   return container;
 };
