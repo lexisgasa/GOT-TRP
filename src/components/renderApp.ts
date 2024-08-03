@@ -1,3 +1,4 @@
+import { gotCharacters } from "../data.js";
 import { renderCard } from "./renderCard.js";
 import { renderHeader } from "./renderHeader.js";
 
@@ -7,11 +8,13 @@ export const renderApp = () => {
   container.classList.add("container");
 
   const header = renderHeader();
-  const card = renderCard();
+
+  const cardList = renderCard(gotCharacters);
 
   container.innerHTML = `
   ${header.outerHTML}
-  ${card.outerHTML}
+  ${cardList.outerHTML}
   `;
+
   return container;
 };
