@@ -1,3 +1,4 @@
+import { gotCharacters } from "../data.js";
 import { renderCardInformation } from "./renderCardInformation.js";
 
 export const renderCardContainer = (): HTMLElement => {
@@ -5,12 +6,14 @@ export const renderCardContainer = (): HTMLElement => {
 
   cardContainer.classList.add("card__container");
 
-  const cardInformation = renderCardInformation();
+  const cardInformation = renderCardInformation(gotCharacters);
 
-  cardContainer.innerHTML = `
-  <span class="card__title">Nombre Apellidos</span>
+  gotCharacters.forEach((character) => {
+    cardContainer.innerHTML = `
+  <span class="card__title">${character.name} ${character.surname ?? ""}</span>
   ${cardInformation.outerHTML}
   `;
+  });
 
   return cardContainer;
 };

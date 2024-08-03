@@ -1,4 +1,4 @@
-import { createCharacter } from "../character/createCharacter";
+import { createCharacter } from "../character/createCharacter.js";
 import type { MandatoryCharacterData } from "../character/types";
 import type { King } from "./types";
 

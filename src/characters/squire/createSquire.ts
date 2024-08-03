@@ -1,4 +1,4 @@
-import { createCharacter } from "../character/createCharacter";
+import { createCharacter } from "../character/createCharacter.js";
 import type { MandatoryCharacterData } from "../character/types";
 import type { Fighter } from "../fighter/types";
 import type { FidelityRange, Squire } from "./types";
