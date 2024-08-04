@@ -1,6 +1,6 @@
-import { gotCharacters } from "../data.js";
-import { renderCard } from "./renderCard.js";
-import { renderHeader } from "./renderHeader.js";
+import { gotCharacters } from "../../characters/data.js";
+import { renderCard } from "../renderCard/renderCard.js";
+import { renderHeader } from "../renderHeader/renderHeader.js";
 
 export const renderApp = () => {
   const container = document.createElement("div");

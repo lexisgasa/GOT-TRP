@@ -1,9 +1,9 @@
-import type { CharacterTypes } from "../data.js";
-import { renderCardContainer } from "./renderCardContainer.js";
+import type { CharacterTypes } from "../../characters/data";
+import { renderCardContainer } from "../renderCardContainer/renderCardContainer.js";
 
 export const renderCard = (characters: CharacterTypes[]): HTMLElement => {
   const cardList = document.createElement("ul");
-  cardList.classList.add("card-list");
+  cardList.classList.add("cards-list");
 
   characters.forEach((character) => {
     const card = document.createElement("li");

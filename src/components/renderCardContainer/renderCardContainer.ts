@@ -1,5 +1,5 @@
-import type { CharacterTypes } from "../data.js";
-import { renderCardInformation } from "./renderCardInformation.js";
+import type { CharacterTypes } from "../../characters/data";
+import { renderCardInformation } from "../renderCardInformation/renderCardInformation.js";
 
 export const renderCardContainer = (character: CharacterTypes): HTMLElement => {
   const cardContainer = document.createElement("div");
