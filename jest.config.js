@@ -5,4 +5,5 @@ export default {
     "^.+.tsx?$": ["ts-jest", {}],
   },
   rootDir: "src",
+  resolver: "jest-ts-webcompat-resolver",
 };
