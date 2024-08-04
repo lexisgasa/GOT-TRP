@@ -3,7 +3,7 @@ import { renderCardContainer } from "../renderCardContainer/renderCardContainer.
 
 export const renderCard = (characters: CharacterTypes[]): HTMLElement => {
   const cardList = document.createElement("ul");
-  cardList.classList.add("card-list");
+  cardList.classList.add("cards-list");
 
   characters.forEach((character) => {
     const card = document.createElement("li");
