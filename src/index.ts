@@ -1,4 +1,4 @@
-import { renderApp } from "./components/renderApp.js";
+import { renderApp } from "./components/app/renderApp.js";
 
 const root = document.querySelector(".root");
 

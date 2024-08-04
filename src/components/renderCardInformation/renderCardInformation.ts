@@ -1,4 +1,4 @@
-import type { CharacterTypes } from "../data.js";
+import type { CharacterTypes } from "../../characters/data.js";
 
 export const renderCardInformation = (
   character: CharacterTypes,
