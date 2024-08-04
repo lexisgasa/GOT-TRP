@@ -9,8 +9,8 @@ export const renderCardContainer = (character: CharacterTypes): HTMLElement => {
   const cardInformation = renderCardInformation(character);
 
   cardContainer.innerHTML = `
-  <span class="card__title">${character.name} ${character.surname ?? ""}</span>
-  ${cardInformation.outerHTML}
+    <span class="card__title">${character.name} ${character.surname ?? ""}</span>
+    ${cardInformation.outerHTML}
   `;
 
   return cardContainer;

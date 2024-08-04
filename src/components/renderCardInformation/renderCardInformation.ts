@@ -7,7 +7,6 @@ export const renderCardInformation = (
 
   cardInformation.innerHTML = `
     <span>Age: ${character.age} years</span>
-    <br>
     <span>State: </span>
     `;
 
