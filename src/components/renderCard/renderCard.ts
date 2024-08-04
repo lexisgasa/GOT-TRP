@@ -1,21 +1,18 @@
 import type { CharacterTypes } from "../../characters/data";
 import { renderCardContainer } from "../renderCardContainer/renderCardContainer.js";
 
-export const renderCard = (characters: CharacterTypes[]): HTMLElement => {
-  const cardList = document.createElement("ul");
-  cardList.classList.add("cards-list");
+export const renderCard = (character: CharacterTypes): HTMLElement => {
+  const card = document.createElement("article");
 
-  characters.forEach((character) => {
-    const card = document.createElement("li");
+  const cardItem = document.createElement("li");
 
-    card.classList.add("card");
+  cardItem.classList.add("card");
 
-    const cardContainer = renderCardContainer(character);
+  const cardContainer = renderCardContainer(character);
 
-    card.appendChild(cardContainer);
+  cardItem.appendChild(cardContainer);
 
-    cardList.appendChild(card);
-  });
+  card.appendChild(cardItem);
 
-  return cardList;
+  return card;
 };
