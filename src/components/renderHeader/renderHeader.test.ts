@@ -3,8 +3,9 @@ import { renderHeader } from "./renderHeader";
 describe("Given the header component", () => {
   describe("When rendered", () => {
     test("Then it should show 'Game of Thrones' inside a heading", () => {
-      const screen = document.createElement("div");
+      const expectedAppTitle = "Game of Thrones";
 
+      const screen = document.createElement("div");
       const header = renderHeader();
 
       screen.appendChild(header);
@@ -12,7 +13,7 @@ describe("Given the header component", () => {
       const appTitle = screen.querySelector("h1");
 
       expect(appTitle).not.toBeNull();
-      expect(appTitle?.textContent).toBe("Game of Thrones");
+      expect(appTitle?.textContent).toBe(expectedAppTitle);
     });
   });
 });

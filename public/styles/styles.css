@@ -21,7 +21,8 @@ body {
   color: #fff;
 }
 
-h1 {
+h1,
+h2 {
   margin: 0;
 }
 
@@ -79,5 +80,5 @@ li {
 }
 
 .card__title {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
