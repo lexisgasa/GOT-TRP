@@ -16,6 +16,7 @@ describe("Given the function createAdviser", () => {
         surname: "Targaryen",
         age: 16,
         isAlive: true,
+        imageUrl: "",
         talk() {
           return "";
         },
