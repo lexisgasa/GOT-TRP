@@ -33,6 +33,10 @@ li {
 .container {
   margin: 0 auto;
   max-width: 1200px;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .header {

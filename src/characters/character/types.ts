@@ -6,6 +6,7 @@ export interface MandatoryCharacterData {
 
 export interface Character extends MandatoryCharacterData {
   isAlive: boolean;
+  imageUrl: string;
   die: () => void;
   talk: () => string;
 }

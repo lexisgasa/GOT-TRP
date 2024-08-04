@@ -20,6 +20,7 @@ describe("Given the function createSquire", () => {
         isAlive: true,
         weapon: "sword",
         dexterity: 9,
+        imageUrl: "",
         talk() {
           return "Primero pego y luego pregunto";
         },

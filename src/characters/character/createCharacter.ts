@@ -9,6 +9,7 @@ export const createCharacter = ({
     name,
     surname,
     age,
+    imageUrl: `images/${name.toLocaleLowerCase()}.webp`,
     isAlive: true,
     talk() {
       return "";

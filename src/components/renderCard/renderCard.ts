@@ -10,7 +10,10 @@ export const renderCard = (character: CharacterTypes): HTMLElement => {
 
   const cardContainer = renderCardContainer(character);
 
-  cardItem.appendChild(cardContainer);
+  cardItem.innerHTML = `
+  <img src="${character.imageUrl}" alt="Imagen del personaje ${character.name.toLowerCase()}">
+  ${cardContainer.outerHTML}
+  `;
 
   card.appendChild(cardItem);
 
