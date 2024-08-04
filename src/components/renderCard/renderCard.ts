@@ -2,9 +2,9 @@ import type { CharacterTypes } from "../../characters/data";
 import { renderCardContainer } from "../renderCardContainer/renderCardContainer.js";
 
 export const renderCard = (character: CharacterTypes): HTMLElement => {
-  const card = document.createElement("article");
+  const card = document.createElement("li");
 
-  const cardItem = document.createElement("li");
+  const cardItem = document.createElement("article");
 
   cardItem.classList.add("card");
 
